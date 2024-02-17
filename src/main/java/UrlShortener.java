@@ -3,7 +3,7 @@ public class UrlShortener {
    public UrlShortener(URLShortenerStrategy urlShortenerStrategy){
        this.urlShortenerStrategy = urlShortenerStrategy;
    }
-   public String shortenUrl(String url){
+   public synchronized String shortenUrl(String url){
        return urlShortenerStrategy.shortenUrl(url);
    }
 }
